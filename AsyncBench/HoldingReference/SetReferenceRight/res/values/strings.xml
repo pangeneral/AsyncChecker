@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MemoryLeakTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button1">ListenerTest</string>
+    <string name="button2">Hello world!</string>
+    <string name="button3">Settings</string>
+
+</resources>
