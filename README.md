@@ -10,7 +10,7 @@ The command line options of AsyncChecker are shown as following:
     -apkName	    The name of apk under analysis. For example, douyin.apk.
     -javaHome       The directory where rt.jar lies. For example, C:\\java\\lib\\rt.jar.
     -apkBasePath	    The directory where apk file lies. For example, D:\\test.
-    -outputBasePath     The directory where the output file of Androlic lies. 
+    -outputBasePath     The directory where the output file of AsyncChecker lies. 
     -androidPath	    The directory where android.jar lies.
     -debugMode          Indicate whether AsyncChecker is in debug mode. Debug mode will output detailed path message which is time consuming. 1 means yes, 0 means no. 0 by default.
     -isJimpleOutput	    Indicate whether AsyncChecker output jimple file or not. 1 means yes, 0 means no. 1 by default.
