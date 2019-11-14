@@ -24,7 +24,7 @@ The command line options of AsyncChecker are shown as following:
 
 Note that -apkName, -javaHome, -apkBasePath, -outputBasePath and -androidPath are compulsory options, which means they must be set. For example:
 
-    java -jar AsyncChecker.jar –apkName douyin.apk -javaHome C:\\Program Files\\Java\\rt.jar –apkBasePath D:\\test –outputBasePath D:\\apkPath –androidPath D:\\android-platform
+    java -jar AsyncChecker.jar -apkName douyin.apk -javaHome C:\\Program Files\\Java\\rt.jar -apkBasePath D:\\test -outputBasePath D:\\apkPath -androidPath D:\\android-platform
     
 If we set -configureFile, then the configuration item in the configure file will cover the configure item set in command line. An example  of configure file is shown as following:
     
@@ -45,4 +45,4 @@ Each line in the file denotes a configuration. Configuration item and its value 
 
 We can make configuration in file through the following command:
 
-    java -jar AsyncChecker.jar –configureFile D:\\configuration.txt
+    java -jar AsyncChecker.jar -configureFile D:\\configuration.txt
