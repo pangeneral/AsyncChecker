@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="libs/sootclasses-trunk-jar-with-dependencies.jar" sourcepath="/Soot/src"/>
-	<classpathentry kind="lib" path="F:/AsyncChecker-SVN/libs/androlic.jar"/>
+	<classpathentry kind="lib" path="libs/androlic.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
