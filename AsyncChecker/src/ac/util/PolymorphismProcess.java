@@ -51,19 +51,19 @@ public class PolymorphismProcess {
 			resultSet.add(ie.getMethod());
 		
 		//The invoked method may be the method of superclass of baseClass
-		SootClass currentClass = baseClass;
-		while (currentClass != null && !currentClass.getType().toString().equals(ClassSignature.OBJECT)) {
-			SootMethod currentMethod = null;
-			try {
-				currentMethod = currentClass.getMethodUnsafe(subsignature);
-			} catch (Exception e) {
-//				ExceptionRecord.saveException(e);
-			}
-			currentClass.getSuperclass();
-			currentClass = currentClass.getSuperclassUnsafe();
-			if (currentMethod != null && currentMethod.hasActiveBody())
-				resultSet.add(currentMethod);
-		}
+//		SootClass currentClass = baseClass;
+//		while (currentClass != null && !currentClass.getType().toString().equals(ClassSignature.OBJECT)) {
+//			SootMethod currentMethod = null;
+//			try {
+//				currentMethod = currentClass.getMethodUnsafe(subsignature);
+//			} catch (Exception e) {
+////				ExceptionRecord.saveException(e);
+//			}
+//			currentClass.getSuperclass();
+//			currentClass = currentClass.getSuperclassUnsafe();
+//			if (currentMethod != null && currentMethod.hasActiveBody())
+//				resultSet.add(currentMethod);
+//		}
 		
 		findAllMethodInSubClass(resultSet, baseClass, subsignature);
 		return resultSet;

@@ -1,6 +1,7 @@
 package ac.processor;
 
 import java.lang.reflect.InvocationTargetException;
+
 import soot.Local;
 import soot.Unit;
 import soot.jimple.AssignStmt;
@@ -21,6 +22,7 @@ import androlic.entity.value.IBasicValue;
 import androlic.entity.value.numeric.BasicNumericConstant;
 import androlic.exception.AbstractAndrolicException;
 import androlic.execution.processor.library.proxy.ILibraryInvocationProcessor;
+import androlic.util.Log;
 
 public class AsyncLibraryInvocationProcessor implements ILibraryInvocationProcessor {
 
@@ -36,6 +38,7 @@ public class AsyncLibraryInvocationProcessor implements ILibraryInvocationProces
 		return processor;
 	}
 
+	@Override
 	public IBasicValue getLibraryInvocationReturnValue(AssignStmt stmt, InvokeExpr libraryInvokeExpr, ContextMessage context,
 			GlobalMessage globalMessage) throws NoSuchMethodException, SecurityException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException, ClassNotFoundException, CloneNotSupportedException, 
@@ -43,6 +46,7 @@ public class AsyncLibraryInvocationProcessor implements ILibraryInvocationProces
 		return this.processLibraryInvokeExpr(stmt, libraryInvokeExpr, context, globalMessage);
 	}
 
+	@Override
 	public boolean processLibraryInvocation(InvokeStmt stmt, InvokeExpr libraryInvokeExpr, ContextMessage context,
 			GlobalMessage globalMessage) throws ClassNotFoundException, InstantiationException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, AbstractAndrolicException {
@@ -87,6 +91,7 @@ public class AsyncLibraryInvocationProcessor implements ILibraryInvocationProces
 	
 	private AsyncTaskRefObject executeAsyncTask(AsyncTaskRefObject asyncObject, Local base, Unit unit, ContextMessage context, GlobalMessage globalMessage) throws AbstractAndrolicException {
 		AsyncTypeState state = asyncObject.getTypeState(globalMessage);
+//		Log.e("begin " + asyncObject.getObjectKey());
 		state.getExecutionUnitList().add(unit);
 		AsyncTaskStatusChecker.checkAsyncTaskOperation(base, asyncObject, AsyncTaskOperation.Execute, unit, globalMessage);
 		state.setCurrentStatus(AsyncTaskStatus.RUNNING);
@@ -98,10 +103,17 @@ public class AsyncLibraryInvocationProcessor implements ILibraryInvocationProces
 		return asyncObject;
 	}
 	
-	
-	
 	private boolean cancelAsyncTask(AsyncTaskRefObject asyncObject, Local base, Unit unit, ContextMessage context, GlobalMessage globalMessage) throws AbstractAndrolicException {
 		AsyncTypeState state = asyncObject.getTypeState(globalMessage);
+		if (state == null) {
+			Log.e("************");
+			for (int i = 0; i < globalMessage.getContextStack().size(); i++) {
+				Log.e(globalMessage.getContextStack().get(i).getMethod().getSignature());
+			}
+			Log.e(unit);
+			Log.e(globalMessage, "-", asyncObject);
+//			System.exit(0);
+		}
 		state.getExecutionUnitList().add(unit);
 		AsyncTaskStatusChecker.checkAsyncTaskOperation(base, asyncObject, AsyncTaskOperation.Cancel, unit, globalMessage);
 		state.setCurrentStatus(AsyncTaskStatus.CANCEL);

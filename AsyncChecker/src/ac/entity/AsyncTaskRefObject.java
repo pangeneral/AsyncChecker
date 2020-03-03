@@ -29,15 +29,12 @@ public class AsyncTaskRefObject extends NewRefHeapObject {
 		StringBuilder sb = new StringBuilder("");
 		for (int i = 0; i < globalMessage.getContextStack().size(); i++) {
 			SootMethod sootMethod = globalMessage.getContextStack().get(i).getMethod();
-			String signature = sootMethod.getName();
-			try {
-				signature = sootMethod.getSignature();
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
+//			String signature = sootMethod.getName();
+			String signature = sootMethod.getSignature();
 			sb.append(signature + "--");
 		}
-		sb.append(initStatement.hashCode());
+		sb.append(initStatement.hashCode() + "--");
+		sb.append(initStatement.toString());
 		this.objectKey = sb.toString();
 	}
 	
@@ -50,14 +47,21 @@ public class AsyncTaskRefObject extends NewRefHeapObject {
 		Map<SootField, IBasicValue> resultMap = new HashMap<SootField, IBasicValue>();
 		for (Map.Entry<SootField, IBasicValue> entry: fieldToValue.entrySet()) {
 			SootClass fieldClass = Scene.v().getSootClassUnsafe(entry.getKey().getType().toString());
-			if (this.isInheritedFromView(fieldClass) || ClassInheritanceProcess.isInheritedFromActivity(fieldClass))
+			if (this.isInheritedFromView(fieldClass) || ClassInheritanceProcess.isInheritedFromActivity(fieldClass)
+					|| this.isInheritedFromFragment(fieldClass) ) {
 				resultMap.put(entry.getKey(), entry.getValue());
+			}
 		}
 		return resultMap;
 	}
 	
 	private boolean isInheritedFromView(SootClass sc) {
 		return ClassInheritanceProcess.isInheritedFromGivenClass(sc, AsyncClassSignature.VIEW, MatchType.equal);
+	}
+	
+	private boolean isInheritedFromFragment(SootClass sc) {
+		return ClassInheritanceProcess.isInheritedFromGivenClass(sc, AsyncClassSignature.FRAGMENT, MatchType.equal) ||
+				ClassInheritanceProcess.isInheritedFromGivenClass(sc, AsyncClassSignature.SUPPORT_FRAGMENT, MatchType.equal);
 	}
 
 }

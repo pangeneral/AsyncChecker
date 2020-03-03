@@ -21,6 +21,7 @@ public class AsyncNewArrayExprProcessor implements INewArrayExprProcessor{
 		return processor;
 	}
 	
+	@Override
 	public NewArrayHeapObject getNewArrayHeapObject(AssignStmt stmt, NewArrayExpr newArrayExpr,
 			ContextMessage context, GlobalMessage globalMessage) {
 		return null;

@@ -25,18 +25,15 @@ public class AsyncErrorRecord {
 
 	public synchronized static void recordStrongReference(AsyncTaskRefObject asyncObject,
 			Map<SootField, IBasicValue> taintedField, Unit unit, GlobalMessage globalMessage) {
-		if(AsyncMain.errorInstanceMap.containsKey(asyncObject.getObjectKey())) {
+		if (!isAsyncObjectNeedRecord(AsyncMain.strongReferenceMap, asyncObject)) {
 			return;
 		}
-		AsyncMain.errorInstanceMap.put(asyncObject.getObjectKey(), asyncObject);
-		recordError(asyncObject);
 		
 		String filePath = ERROR_FOLDER + "strong-reference-sum.txt";
-		String content = asyncObject.getType().toString() + ";" + unit + ";" + asyncObject.getObjectKey() + "\n";
-		record(content, filePath);
+		recordSum(asyncObject, globalMessage, filePath);
 
 		filePath = ERROR_FOLDER + "strong-reference.txt";
-		content = "Tainted field: ";
+		String content = "Tainted field: ";
 		int index = 0;
 		for (Map.Entry<SootField, IBasicValue> entry : taintedField.entrySet()) {
 			content += entry.getKey().getSignature() + "";
@@ -52,70 +49,52 @@ public class AsyncErrorRecord {
 
 	public synchronized static void recordRepeatStart(AsyncTaskRefObject asyncObject, Unit unit,
 			GlobalMessage globalMessage) {
-		if(AsyncMain.errorInstanceMap.containsKey(asyncObject.getObjectKey())) {
+		if (!isAsyncObjectNeedRecord(AsyncMain.repeatStartMap, asyncObject))
 			return;
-		}
-		AsyncMain.errorInstanceMap.put(asyncObject.getObjectKey(), asyncObject);
-		recordError(asyncObject);
 		
 		String filePath = ERROR_FOLDER + "repeat-start-sum.txt";
-		String content = asyncObject.getType().toString() + ";" + unit + ";" + asyncObject.getObjectKey() + "\n";
-		record(content, filePath);
+		recordSum(asyncObject, globalMessage, filePath);
 
 		filePath = ERROR_FOLDER + "repeat-start.txt";
-		content = AsyncErrorRecord.recordPathInfo(asyncObject, globalMessage);
+		String content = AsyncErrorRecord.recordPathInfo(asyncObject, globalMessage);
 		record(content, filePath);
 	}
 
 	public synchronized static void recordEarlyCancel(AsyncTaskRefObject asyncObject, Unit unit,
 			GlobalMessage globalMessage) {
-		if(AsyncMain.errorInstanceMap.containsKey(asyncObject.getObjectKey())) {
+		if (!isAsyncObjectNeedRecord(AsyncMain.earlyCancelMap, asyncObject))
 			return;
-		}
-		AsyncMain.errorInstanceMap.put(asyncObject.getObjectKey(), asyncObject);
-		recordError(asyncObject);
 		
 		String filePath = ERROR_FOLDER + "early-cancel-sum.txt";
-		String content = asyncObject.getType().toString() + ";" + unit + ";" + asyncObject.getObjectKey() + "\n";
-		record(content, filePath);
+		recordSum(asyncObject, globalMessage, filePath);
 
 		filePath = ERROR_FOLDER + "early-cancel.txt";
-		content = AsyncErrorRecord.recordPathInfo(asyncObject, globalMessage);
+		String content = AsyncErrorRecord.recordPathInfo(asyncObject, globalMessage);
 		record(content, filePath);
 	}
 
 	public synchronized static void recordNotCancel(AsyncTaskRefObject asyncObject, GlobalMessage globalMessage) {
-		if(AsyncMain.errorInstanceMap.containsKey(asyncObject.getObjectKey())) {
+		if (!isAsyncObjectNeedRecord(AsyncMain.notCancelMap, asyncObject))
 			return;
-		}
-		AsyncMain.errorInstanceMap.put(asyncObject.getObjectKey(), asyncObject);
-		recordError(asyncObject);
 		
 		String filePath = ERROR_FOLDER + "not-cancel-sum.txt";
-		String content = asyncObject.getType().toString() + ";" + asyncObject.getInitStatement().toString() + ";"
-				+ asyncObject.getObjectKey() + "\n";
-		record(content, filePath);
+		recordSum(asyncObject, globalMessage, filePath);
 
 		filePath = ERROR_FOLDER + "not-cancel.txt";
-		content = asyncObject.getInitStatement() + " is not cancelled after execute\n";
+		String content = asyncObject.getInitStatement() + " is not cancelled after execute\n";
 		content += AsyncErrorRecord.recordPathInfo(asyncObject, globalMessage);
 		record(content, filePath);
 	}
 
 	public synchronized static void recordNotTerminate(AsyncTaskRefObject asyncObject, GlobalMessage globalMessage) {
-		if(AsyncMain.errorInstanceMap.containsKey(asyncObject.getObjectKey())) {
+		if (!isAsyncObjectNeedRecord(AsyncMain.notTerminateMap, asyncObject))
 			return;
-		}
-		AsyncMain.errorInstanceMap.put(asyncObject.getObjectKey(), asyncObject);
-		recordError(asyncObject);
 		
 		String filePath = ERROR_FOLDER + "not-terminate-sum.txt";
-		String content = asyncObject.getType().toString() + ";" + asyncObject.getInitStatement().toString() + ";"
-				+ asyncObject.getObjectKey() + "\n";
-		record(content, filePath);
+		recordSum(asyncObject, globalMessage, filePath);
 
 		filePath = ERROR_FOLDER + "not-terminate.txt";
-		content = asyncObject.getInitStatement() + " did not terminate\n";
+		String content = asyncObject.getInitStatement() + " did not terminate\n";
 		content += AsyncErrorRecord.recordPathInfo(asyncObject, globalMessage);
 		SootMethod doInBackgroundMethod = MethodUtil.getMethod(((RefType) asyncObject.getType()).getSootClass(),
 				AsyncMethodSignature.DO_IN_BACKGROUND_NAME);
@@ -123,6 +102,29 @@ public class AsyncErrorRecord {
 		record(content, filePath);
 	}
 
+	/**
+	 * If processedMap doesn't contain asyncObject, return true. Otherwise, return false
+	 * @param processedMap
+	 * @param asyncObject
+	 * @return
+	 */
+	private synchronized static boolean isAsyncObjectNeedRecord(Map<String, AsyncTaskRefObject> processedMap, AsyncTaskRefObject asyncObject) {
+		AsyncMain.rightInstanceMap.remove(asyncObject.getObjectKey());
+		if (!AsyncMain.errorInstanceMap.containsKey(asyncObject.getObjectKey())) {
+			AsyncMain.errorInstanceMap.put(asyncObject.getObjectKey(), asyncObject);
+			String errorInstanceFilePath = BaseConfiguration.getSymbolicPathFolder() + File.separator + "error-async.txt";
+			record(asyncObject.getObjectKey()+"\n", errorInstanceFilePath);
+		}
+		
+		if (!processedMap.containsKey(asyncObject.getObjectKey())) {
+			processedMap.put(asyncObject.getObjectKey(), asyncObject);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 	private synchronized static String recordPathInfo(AsyncTaskRefObject asyncObject, GlobalMessage globalMessage) {
 		String content = "";
 		AsyncTypeState state = asyncObject.getTypeState(globalMessage);
@@ -144,28 +146,46 @@ public class AsyncErrorRecord {
 		String logFilePath = BaseConfiguration.getSymbolicPathFolder() + File.separator + "log.txt";
 		String content = source + "sootTime: " + (androlicStartTime - sootStartTime) + "\n" + "androlic time: "
 				+ (System.currentTimeMillis() - androlicStartTime) + "\n";
+//		String content = source + Thread.currentThread().getName() + " sootTime: " + (androlicStartTime - sootStartTime) + "\n" + "androlic time: "
+//				+ (System.currentTimeMillis() - androlicStartTime) + "\n";
 		record(content, logFilePath);
 	}
 
-	public synchronized static void recordInstance(AsyncTaskRefObject asyncObject) {
-		if(AsyncMain.rightInstanceMap.containsKey(asyncObject.getObjectKey())) {
-			return;
-		}
-		AsyncMain.rightInstanceMap.put(asyncObject.getObjectKey(), asyncObject);
-		
+	public synchronized static void recordRightInstance() {
 		String rightInstanceFilePath = BaseConfiguration.getSymbolicPathFolder() + File.separator + "right-async.txt";
-		recordAsyncTaskRefObject(asyncObject, rightInstanceFilePath);
+		FileWriter errorWriter = null;
+		try {
+			errorWriter = new FileWriter(rightInstanceFilePath, true);
+			for (String key: AsyncMain.rightInstanceMap.keySet()) {
+				errorWriter.write(key + "\n");
+			}
+		} catch (Exception e) {
+			ExceptionRecord.saveException(e);
+		} finally {
+			try {
+				errorWriter.close();
+			} catch (IOException e) {
+				ExceptionRecord.saveException(e);
+			}
+		}
 	}
-
-	public synchronized static void recordError(AsyncTaskRefObject asyncObject) {
-		String errorInstanceFilePath = BaseConfiguration.getSymbolicPathFolder() + File.separator + "error-async.txt";
-		recordAsyncTaskRefObject(asyncObject, errorInstanceFilePath);
-	}
-
-	private static void recordAsyncTaskRefObject(AsyncTaskRefObject asyncObject, String filePath) {
-		String content = asyncObject.getObjectKey() + "\n";
+	
+	private static void recordSum(AsyncTaskRefObject asyncObject, GlobalMessage globalMessage, String filePath) {
+		String content = asyncObject.getType().toString() + ";" + globalMessage.getCurrentPathInfo().getLength() + ";" + asyncObject.getInitStatement().toString() + ";"
+				+ asyncObject.getObjectKey() + "\n";
 		record(content, filePath);
 	}
+	
+//	public synchronized static void recordInstance(AsyncTaskRefObject asyncObject) {
+//		if(AsyncMain.rightInstanceMap.containsKey(asyncObject.getObjectKey())) {
+//			return;
+//		}
+//		AsyncMain.rightInstanceMap.put(asyncObject.getObjectKey(), asyncObject);
+//		
+//		String rightInstanceFilePath = BaseConfiguration.getSymbolicPathFolder() + File.separator + "right-async.txt";
+//		recordAsyncTaskRefObject(asyncObject, rightInstanceFilePath);
+//	}
+
 
 	public static void record(String content, String filePath) {
 		FileWriter errorWriter = null;
