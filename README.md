@@ -1,5 +1,5 @@
 # AsyncChecker
-A flow, field, object, context and path-sensitive inter-procedural static analysis tool for misuse detection of AsyncTask
+A flow, field, object and context-sensitive inter-procedural static analysis tool for misuse detection of AsyncTask
 
 we can use it through following command:
 
