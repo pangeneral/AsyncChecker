@@ -1,0 +1,22 @@
+apkName 1516.apk
+pkBasePath test-apk
+apkBasePath E:\\Experiment\\TSE\\summary-based实验结果\\apk-for-test
+outputBasePath jimple\\Apks
+isJimpleOutput 1
+androidPath D:\\download\\soot-path\\android-platforms-master
+maxRunningTime 3000000
+maxBranchNumber 20
+maxValueFlowNumber 10
+restrictBranch 0
+DEBUG 1
+debugMode 0
+maxRecursiveInvocationLevel
+entryMethod 
+initMethodSubsignature
+benchmark
+com.MainActivity.entryMethod
+jimple\\benchmark
+com.csipsimple.service.SipService$StartRunnable.doRun
+com.csipsimple.service.SipService$StartRunnable.doRun
+com.csipsimple.widgets.SeekBarPreference.onCreateDialogView
+com.csipsimple.service.SipService$AccountStatusContentObserver.onChange
