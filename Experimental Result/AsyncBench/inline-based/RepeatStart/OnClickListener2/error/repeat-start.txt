@@ -1,0 +1,172 @@
+AsyncTask path: 
+$r5 = new com.example.repeatstart.Tasker
+virtualinvoke $r2.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+virtualinvoke $r2.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+
+execution path: 
+parameter0 := @parameter0: int	 dummyMain  
+parameter1 := @parameter1: android.view.KeyEvent	 dummyMain  
+parameter2 := @parameter2: int	 dummyMain  
+parameter3 := @parameter3: int	 dummyMain  
+parameter4 := @parameter4: android.view.KeyEvent	 dummyMain  
+parameter5 := @parameter5: int	 dummyMain  
+parameter6 := @parameter6: android.view.KeyEvent	 dummyMain  
+parameter7 := @parameter7: int	 dummyMain  
+parameter8 := @parameter8: android.view.KeyEvent	 dummyMain  
+parameter9 := @parameter9: int	 dummyMain  
+parameter10 := @parameter10: int	 dummyMain  
+parameter11 := @parameter11: android.view.KeyEvent	 dummyMain  
+parameter12 := @parameter12: android.view.ContextMenu	 dummyMain  
+parameter13 := @parameter13: android.view.View	 dummyMain  
+parameter14 := @parameter14: android.view.ContextMenu$ContextMenuInfo	 dummyMain  
+parameter15 := @parameter15: int	 dummyMain  
+parameter16 := @parameter16: android.view.KeyEvent	 dummyMain  
+parameter17 := @parameter17: int	 dummyMain  
+parameter18 := @parameter18: int	 dummyMain  
+parameter19 := @parameter19: android.view.KeyEvent	 dummyMain  
+parameter20 := @parameter20: int	 dummyMain  
+parameter21 := @parameter21: android.view.KeyEvent	 dummyMain  
+parameter22 := @parameter22: android.view.View	 dummyMain  
+parameter23 := @parameter23: android.os.Bundle	 dummyMain  
+parameter24 := @parameter24: android.os.Bundle	 dummyMain  
+parameter25 := @parameter25: android.os.Bundle	 dummyMain  
+parameter26 := @parameter26: android.os.Bundle	 dummyMain  
+parameter27 := @parameter27: android.content.Intent	 dummyMain  
+parameter28 := @parameter28: java.util.List	 dummyMain  
+parameter29 := @parameter29: android.content.Intent	 dummyMain  
+$r1 = interfaceinvoke parameter28.<java.util.List: java.lang.Object get(int)>(0)	 dummyMain  
+$r2 = (java.lang.Boolean) $r1	 dummyMain  
+if $r2 == 0 goto return $r3	 dummyMain  
+$r3 = new com.example.repeatstart.MainActivity	 dummyMain  
+specialinvoke $r3.<com.example.repeatstart.MainActivity: void <init>()>()	 dummyMain  
+    $r0 := @this: com.example.repeatstart.MainActivity	 dummyMain  <com.example.repeatstart.MainActivity: void <init>()>  
+    specialinvoke $r0.<android.app.Activity: void <init>()>()	 dummyMain  <com.example.repeatstart.MainActivity: void <init>()>  
+    return	 dummyMain  <com.example.repeatstart.MainActivity: void <init>()>  
+specialinvoke $r3.<com.example.repeatstart.MainActivity: void <init>()>()	 dummyMain  
+$r3.<com.example.repeatstart.MainActivity: android.content.Intent ipcIntent> = parameter27	 dummyMain  
+$r4 = new com.example.repeatstart.MainActivity$1	 dummyMain  
+specialinvoke $r4.<com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>($r3)	 dummyMain  
+    $r0 := @this: com.example.repeatstart.MainActivity$1	 dummyMain  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+    $r1 := @parameter0: com.example.repeatstart.MainActivity	 dummyMain  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+    $r0.<com.example.repeatstart.MainActivity$1: com.example.repeatstart.MainActivity this$0> = $r1	 dummyMain  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+    specialinvoke $r0.<java.lang.Object: void <init>()>()	 dummyMain  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+    return	 dummyMain  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+specialinvoke $r4.<com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>($r3)	 dummyMain  
+$r5 = new android.app.Activity	 dummyMain  
+specialinvoke $r5.<android.app.Activity: void <init>()>()	 dummyMain  
+parameter0 = parameter29	 dummyMain  
+$r6 = new android.widget.TextView	 dummyMain  
+specialinvoke $r6.<android.widget.TextView: void <init>(android.content.Context)>(parameter0)	 dummyMain  
+parameter1 = parameter29	 dummyMain  
+$r7 = new android.view.View	 dummyMain  
+specialinvoke $r7.<android.view.View: void <init>(android.content.Context)>(parameter1)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>(parameter23)	 dummyMain  
+    $r0 := @this: com.example.repeatstart.MainActivity	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r1 := @parameter0: android.os.Bundle	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    virtualinvoke $r0.<com.example.repeatstart.MainActivity: void setContentView(int)>(2130903040)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r2 = virtualinvoke $r0.<com.example.repeatstart.MainActivity: android.view.View findViewById(int)>(2131230720)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r3 = (android.widget.TextView) $r2	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r0.<com.example.repeatstart.MainActivity: android.widget.TextView view1> = $r3	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r3 = $r0.<com.example.repeatstart.MainActivity: android.widget.TextView view1>	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r4 = new com.example.repeatstart.MainActivity$1	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    specialinvoke $r4.<com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>($r0)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+        $r0 := @this: com.example.repeatstart.MainActivity$1	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+        $r1 := @parameter0: com.example.repeatstart.MainActivity	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+        $r0.<com.example.repeatstart.MainActivity$1: com.example.repeatstart.MainActivity this$0> = $r1	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+        specialinvoke $r0.<java.lang.Object: void <init>()>()	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+        return	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>  
+    specialinvoke $r4.<com.example.repeatstart.MainActivity$1: void <init>(com.example.repeatstart.MainActivity)>($r0)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    virtualinvoke $r3.<android.widget.TextView: void setOnClickListener(android.view.View$OnClickListener)>($r4)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r5 = new com.example.repeatstart.Tasker	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r3 = $r0.<com.example.repeatstart.MainActivity: android.widget.TextView view1>	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    specialinvoke $r5.<com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>($r3)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+        $r0 := @this: com.example.repeatstart.Tasker	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>  
+        $r1 := @parameter0: android.widget.TextView	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>  
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>()	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>  
+        $r2 = new java.lang.ref.WeakReference	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>  
+        specialinvoke $r2.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>  
+        $r0.<com.example.repeatstart.Tasker: java.lang.ref.WeakReference referenceView> = $r2	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>  
+        return	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  <com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>  
+    specialinvoke $r5.<com.example.repeatstart.Tasker: void <init>(android.widget.TextView)>($r3)	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    $r0.<com.example.repeatstart.MainActivity: android.os.AsyncTask task1> = $r5	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+    return	 dummyMain  <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)>(parameter23)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onStart()>()	 dummyMain  
+$r8 = interfaceinvoke parameter28.<java.util.List: java.lang.Object get(int)>(1)	 dummyMain  
+$r9 = (java.lang.Boolean) $r8	 dummyMain  
+if $r9 == 0 goto virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onPostCreate(android.os.Bundle)>(parameter26)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onRestoreInstanceState(android.os.Bundle)>(parameter25)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onPostCreate(android.os.Bundle)>(parameter26)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onResume()>()	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onPostResume()>()	 dummyMain  
+$z0 = virtualinvoke $r5.<android.app.Activity: boolean onKeyUp(int,android.view.KeyEvent)>(parameter0, parameter1)	 dummyMain  
+$z1 = virtualinvoke $r5.<android.app.Activity: boolean onKeyMultiple(int,int,android.view.KeyEvent)>(parameter2, parameter3, parameter4)	 dummyMain  
+$z2 = virtualinvoke $r7.<android.view.View: boolean onKeyDown(int,android.view.KeyEvent)>(parameter5, parameter6)	 dummyMain  
+$z3 = virtualinvoke $r7.<android.view.View: boolean onKeyUp(int,android.view.KeyEvent)>(parameter7, parameter8)	 dummyMain  
+$z4 = virtualinvoke $r7.<android.view.View: boolean onKeyMultiple(int,int,android.view.KeyEvent)>(parameter9, parameter10, parameter11)	 dummyMain  
+$z5 = virtualinvoke $r6.<android.widget.TextView: boolean onPreDraw()>()	 dummyMain  
+virtualinvoke $r5.<android.app.Activity: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>(parameter12, parameter13, parameter14)	 dummyMain  
+virtualinvoke $r5.<android.app.Activity: void onTrimMemory(int)>(parameter17)	 dummyMain  
+$z6 = virtualinvoke $r5.<android.app.Activity: boolean onKeyDown(int,android.view.KeyEvent)>(parameter18, parameter19)	 dummyMain  
+$z7 = virtualinvoke $r5.<android.app.Activity: boolean onKeyLongPress(int,android.view.KeyEvent)>(parameter20, parameter21)	 dummyMain  
+virtualinvoke $r4.<com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>(parameter22)	 dummyMain  
+    $r0 := @this: com.example.repeatstart.MainActivity$1	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r1 := @parameter0: android.view.View	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r3 = $r0.<com.example.repeatstart.MainActivity$1: com.example.repeatstart.MainActivity this$0>	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r2 = staticinvoke <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>($r3)	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+        $r0 := @parameter0: com.example.repeatstart.MainActivity	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>  
+        r1 = $r0.<com.example.repeatstart.MainActivity: android.os.AsyncTask task1>	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>  
+        return r1	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>  
+    $r2 = staticinvoke <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>($r3)	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r4 = newarray (java.lang.Object)[1]	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r4[0] = ""	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    virtualinvoke $r2.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r4)	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    return	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+virtualinvoke $r4.<com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>(parameter22)	 dummyMain  
+$r10 = interfaceinvoke parameter28.<java.util.List: java.lang.Object get(int)>(2)	 dummyMain  
+$r11 = (java.lang.Boolean) $r10	 dummyMain  
+if $r11 == 0 goto $z0 = virtualinvoke $r5.<android.app.Activity: boolean onKeyUp(int,android.view.KeyEvent)>(parameter0, parameter1)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onPause()>()	 dummyMain  
+$r12 = virtualinvoke $r3.<com.example.repeatstart.MainActivity: java.lang.CharSequence onCreateDescription()>()	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onSaveInstanceState(android.os.Bundle)>(parameter24)	 dummyMain  
+$r13 = interfaceinvoke parameter28.<java.util.List: java.lang.Object get(int)>(3)	 dummyMain  
+$r14 = (java.lang.Boolean) $r13	 dummyMain  
+if $r14 == 0 goto virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onResume()>()	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onStop()>()	 dummyMain  
+$r15 = interfaceinvoke parameter28.<java.util.List: java.lang.Object get(int)>(4)	 dummyMain  
+$r16 = (java.lang.Boolean) $r15	 dummyMain  
+if $r16 == 0 goto virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onDestroy()>()	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onRestart()>()	 dummyMain  
+goto [?= virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onStart()>()]	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onStart()>()	 dummyMain  
+$r8 = interfaceinvoke parameter28.<java.util.List: java.lang.Object get(int)>(1)	 dummyMain  
+$r9 = (java.lang.Boolean) $r8	 dummyMain  
+if $r9 == 0 goto virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onPostCreate(android.os.Bundle)>(parameter26)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onRestoreInstanceState(android.os.Bundle)>(parameter25)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onPostCreate(android.os.Bundle)>(parameter26)	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onResume()>()	 dummyMain  
+virtualinvoke $r3.<com.example.repeatstart.MainActivity: void onPostResume()>()	 dummyMain  
+$z0 = virtualinvoke $r5.<android.app.Activity: boolean onKeyUp(int,android.view.KeyEvent)>(parameter0, parameter1)	 dummyMain  
+$z1 = virtualinvoke $r5.<android.app.Activity: boolean onKeyMultiple(int,int,android.view.KeyEvent)>(parameter2, parameter3, parameter4)	 dummyMain  
+$z2 = virtualinvoke $r7.<android.view.View: boolean onKeyDown(int,android.view.KeyEvent)>(parameter5, parameter6)	 dummyMain  
+$z3 = virtualinvoke $r7.<android.view.View: boolean onKeyUp(int,android.view.KeyEvent)>(parameter7, parameter8)	 dummyMain  
+$z4 = virtualinvoke $r7.<android.view.View: boolean onKeyMultiple(int,int,android.view.KeyEvent)>(parameter9, parameter10, parameter11)	 dummyMain  
+$z5 = virtualinvoke $r6.<android.widget.TextView: boolean onPreDraw()>()	 dummyMain  
+virtualinvoke $r5.<android.app.Activity: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>(parameter12, parameter13, parameter14)	 dummyMain  
+virtualinvoke $r5.<android.app.Activity: void onTrimMemory(int)>(parameter17)	 dummyMain  
+$z6 = virtualinvoke $r5.<android.app.Activity: boolean onKeyDown(int,android.view.KeyEvent)>(parameter18, parameter19)	 dummyMain  
+$z7 = virtualinvoke $r5.<android.app.Activity: boolean onKeyLongPress(int,android.view.KeyEvent)>(parameter20, parameter21)	 dummyMain  
+virtualinvoke $r4.<com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>(parameter22)	 dummyMain  
+    $r0 := @this: com.example.repeatstart.MainActivity$1	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r1 := @parameter0: android.view.View	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r3 = $r0.<com.example.repeatstart.MainActivity$1: com.example.repeatstart.MainActivity this$0>	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r2 = staticinvoke <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>($r3)	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+        $r0 := @parameter0: com.example.repeatstart.MainActivity	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>  
+        r1 = $r0.<com.example.repeatstart.MainActivity: android.os.AsyncTask task1>	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>  
+        return r1	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>  
+    $r2 = staticinvoke <com.example.repeatstart.MainActivity: android.os.AsyncTask access$0(com.example.repeatstart.MainActivity)>($r3)	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r4 = newarray (java.lang.Object)[1]	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    $r4[0] = ""	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+    virtualinvoke $r2.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r4)	 dummyMain  <com.example.repeatstart.MainActivity$1: void onClick(android.view.View)>  
+

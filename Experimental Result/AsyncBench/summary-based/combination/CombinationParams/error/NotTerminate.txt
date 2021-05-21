@@ -1,0 +1,4 @@
+NotTerminate com.example.combination.ChildTasker
+1 A <com.example.combination.Test: com.example.combination.Tasker newAsyncTaskChild(android.view.View)> $r2 = new com.example.combination.ChildTasker
+2 S <com.example.combination.Test: void start(android.os.AsyncTask)> virtualinvoke $r1.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r2)
+

@@ -1,0 +1,5 @@
+NotTerminate com.example.repeatstart.Tasker
+1 A <com.example.repeatstart.Test: void newTasker()> $r1 = new com.example.repeatstart.Tasker
+2 S <com.example.repeatstart.Test: void startTask()> virtualinvoke $r1.<com.example.repeatstart.Tasker: android.os.AsyncTask execute(java.lang.Object[])>($r2)
+3 C <com.example.repeatstart.Test: void cancel()> virtualinvoke $r1.<com.example.repeatstart.Tasker: boolean cancel(boolean)>(1)
+

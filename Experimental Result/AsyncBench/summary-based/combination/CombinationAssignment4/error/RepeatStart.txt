@@ -1,0 +1,8 @@
+RepeatStart com.example.combination.ChildTasker
+1 A <com.example.combination.MainActivity: void onCreate(android.os.Bundle)> $r2 = new com.example.combination.ChildTasker
+2 S <com.example.combination.MainActivity: void onCreate(android.os.Bundle)> virtualinvoke $r3.<com.example.combination.Tasker: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+3 S <com.example.combination.MainActivity: void onCreate(android.os.Bundle)> virtualinvoke $r3.<com.example.combination.Tasker: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+4 S <com.example.combination.MainActivity: void onCreate(android.os.Bundle)> virtualinvoke $r3.<com.example.combination.Tasker: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+5 S <com.example.combination.MainActivity: void onCreate(android.os.Bundle)> virtualinvoke $r3.<com.example.combination.Tasker: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+6 C <com.example.combination.MainActivity: void onDestroy()> virtualinvoke $r1.<com.example.combination.Tasker: boolean cancel(boolean)>(1)
+

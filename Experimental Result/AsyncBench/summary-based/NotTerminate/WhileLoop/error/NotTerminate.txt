@@ -1,0 +1,5 @@
+NotTerminate com.example.whileloopwrong.MainActivity$Tasker
+1 A <com.example.whileloopwrong.MainActivity: void onCreate(android.os.Bundle)> $r2 = new com.example.whileloopwrong.MainActivity$Tasker
+2 S <com.example.whileloopwrong.MainActivity: void onCreate(android.os.Bundle)> virtualinvoke $r3.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+3 C <com.example.whileloopwrong.MainActivity: void onDestroy()> virtualinvoke $r1.<android.os.AsyncTask: boolean cancel(boolean)>(1)
+

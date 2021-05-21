@@ -1,0 +1,5 @@
+com.example.loopnestwrong.MainActivity 85
+sootTime: 963
+androlic time: 406
+sootTime: 963
+androlic time: 2371

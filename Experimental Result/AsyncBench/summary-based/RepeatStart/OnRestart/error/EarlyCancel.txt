@@ -1,0 +1,4 @@
+EarlyCancel com.example.repeatstart.Tasker
+1 A <com.example.repeatstart.MainActivity: void onCreate(android.os.Bundle)> $r4 = new com.example.repeatstart.Tasker
+2 C <com.example.repeatstart.MainActivity: void onDestroy()> virtualinvoke $r1.<android.os.AsyncTask: boolean cancel(boolean)>(1)
+

@@ -1,0 +1,5 @@
+com.example.whileloopright.MainActivity 85
+sootTime: 981
+androlic time: 409
+sootTime: 981
+androlic time: 2372

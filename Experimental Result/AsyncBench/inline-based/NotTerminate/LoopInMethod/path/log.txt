@@ -1,0 +1,5 @@
+com.example.loopinmethodwrong.MainActivity 85
+sootTime: 937
+androlic time: 477
+sootTime: 937
+androlic time: 2397

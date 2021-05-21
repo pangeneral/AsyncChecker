@@ -1,0 +1,5 @@
+com.example.notcancel.lifecycle.MainActivity 111
+sootTime: 1024
+androlic time: 294
+sootTime: 1024
+androlic time: 2253

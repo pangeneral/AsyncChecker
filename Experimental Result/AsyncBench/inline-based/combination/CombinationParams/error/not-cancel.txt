@@ -1,0 +1,120 @@
+$r1 = new com.example.combination.Tasker is not cancelled after execute
+AsyncTask path: 
+$r1 = new com.example.combination.Tasker
+virtualinvoke $r1.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r2)
+
+execution path: 
+parameter0 := @parameter0: int	 dummyMain  
+parameter1 := @parameter1: android.view.KeyEvent	 dummyMain  
+parameter2 := @parameter2: int	 dummyMain  
+parameter3 := @parameter3: android.view.KeyEvent	 dummyMain  
+parameter4 := @parameter4: int	 dummyMain  
+parameter5 := @parameter5: android.view.KeyEvent	 dummyMain  
+parameter6 := @parameter6: int	 dummyMain  
+parameter7 := @parameter7: int	 dummyMain  
+parameter8 := @parameter8: android.view.KeyEvent	 dummyMain  
+parameter9 := @parameter9: int	 dummyMain  
+parameter10 := @parameter10: android.view.KeyEvent	 dummyMain  
+parameter11 := @parameter11: int	 dummyMain  
+parameter12 := @parameter12: android.view.KeyEvent	 dummyMain  
+parameter13 := @parameter13: int	 dummyMain  
+parameter14 := @parameter14: android.view.KeyEvent	 dummyMain  
+parameter15 := @parameter15: int	 dummyMain  
+parameter16 := @parameter16: android.view.ContextMenu	 dummyMain  
+parameter17 := @parameter17: android.view.View	 dummyMain  
+parameter18 := @parameter18: android.view.ContextMenu$ContextMenuInfo	 dummyMain  
+parameter19 := @parameter19: int	 dummyMain  
+parameter20 := @parameter20: int	 dummyMain  
+parameter21 := @parameter21: android.view.KeyEvent	 dummyMain  
+parameter22 := @parameter22: android.os.Bundle	 dummyMain  
+parameter23 := @parameter23: android.os.Bundle	 dummyMain  
+parameter24 := @parameter24: android.os.Bundle	 dummyMain  
+parameter25 := @parameter25: android.os.Bundle	 dummyMain  
+parameter26 := @parameter26: android.content.Intent	 dummyMain  
+parameter27 := @parameter27: java.util.List	 dummyMain  
+parameter28 := @parameter28: android.content.Intent	 dummyMain  
+$r1 = interfaceinvoke parameter27.<java.util.List: java.lang.Object get(int)>(0)	 dummyMain  
+$r2 = (java.lang.Boolean) $r1	 dummyMain  
+if $r2 == 0 goto return $r3	 dummyMain  
+$r3 = new com.example.combination.MainActivity	 dummyMain  
+specialinvoke $r3.<com.example.combination.MainActivity: void <init>()>()	 dummyMain  
+    $r0 := @this: com.example.combination.MainActivity	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    specialinvoke $r0.<android.app.Activity: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker1> = null	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker2> = null	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker3> = null	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker4> = null	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker5> = null	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker6> = null	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Test mTest> = null	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+    return	 dummyMain  <com.example.combination.MainActivity: void <init>()>  
+specialinvoke $r3.<com.example.combination.MainActivity: void <init>()>()	 dummyMain  
+$r3.<com.example.combination.MainActivity: android.content.Intent ipcIntent> = parameter26	 dummyMain  
+$r4 = new android.app.Activity	 dummyMain  
+specialinvoke $r4.<android.app.Activity: void <init>()>()	 dummyMain  
+parameter0 = parameter28	 dummyMain  
+$r5 = new android.view.View	 dummyMain  
+specialinvoke $r5.<android.view.View: void <init>(android.content.Context)>(parameter0)	 dummyMain  
+virtualinvoke $r3.<com.example.combination.MainActivity: void onCreate(android.os.Bundle)>(parameter22)	 dummyMain  
+    $r0 := @this: com.example.combination.MainActivity	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r1 := @parameter0: android.os.Bundle	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    virtualinvoke $r0.<com.example.combination.MainActivity: void setContentView(int)>(2130903040)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r2 = new com.example.combination.Test	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    specialinvoke $r2.<com.example.combination.Test: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+        $r0 := @this: com.example.combination.Test	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void <init>()>  
+        specialinvoke $r0.<java.lang.Object: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void <init>()>  
+        return	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void <init>()>  
+    specialinvoke $r2.<com.example.combination.Test: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Test mTest> = $r2	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r2 = $r0.<com.example.combination.MainActivity: com.example.combination.Test mTest>	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r3 = virtualinvoke $r2.<com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+        $r0 := @this: com.example.combination.Test	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+        $r1 = new com.example.combination.Tasker	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+        specialinvoke $r1.<com.example.combination.Tasker: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+            $r0 := @this: com.example.combination.Tasker	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  <com.example.combination.Tasker: void <init>()>  
+            specialinvoke $r0.<android.os.AsyncTask: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  <com.example.combination.Tasker: void <init>()>  
+            return	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  <com.example.combination.Tasker: void <init>()>  
+        specialinvoke $r1.<com.example.combination.Tasker: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+        return $r1	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+    $r3 = virtualinvoke $r2.<com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker1> = $r3	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r2 = $r0.<com.example.combination.MainActivity: com.example.combination.Test mTest>	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r3 = $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker1>	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    virtualinvoke $r2.<com.example.combination.Test: void start(android.os.AsyncTask)>($r3)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+        $r0 := @this: com.example.combination.Test	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        $r1 := @parameter0: android.os.AsyncTask	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        $r2 = newarray (java.lang.String)[1]	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        $r2[0] = ""	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        virtualinvoke $r1.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r2)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        return	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+    virtualinvoke $r2.<com.example.combination.Test: void start(android.os.AsyncTask)>($r3)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r2 = $r0.<com.example.combination.MainActivity: com.example.combination.Test mTest>	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r3 = virtualinvoke $r2.<com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+        $r0 := @this: com.example.combination.Test	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+        $r1 = new com.example.combination.Tasker	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+        specialinvoke $r1.<com.example.combination.Tasker: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+            $r0 := @this: com.example.combination.Tasker	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  <com.example.combination.Tasker: void <init>()>  
+            specialinvoke $r0.<android.os.AsyncTask: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  <com.example.combination.Tasker: void <init>()>  
+            return	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  <com.example.combination.Tasker: void <init>()>  
+        specialinvoke $r1.<com.example.combination.Tasker: void <init>()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+        return $r1	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>  
+    $r3 = virtualinvoke $r2.<com.example.combination.Test: com.example.combination.Tasker newAsyncTask()>()	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker2> = $r3	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r2 = $r0.<com.example.combination.MainActivity: com.example.combination.Test mTest>	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r3 = $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker2>	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    virtualinvoke $r2.<com.example.combination.Test: void start(android.os.AsyncTask)>($r3)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+        $r0 := @this: com.example.combination.Test	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        $r1 := @parameter0: android.os.AsyncTask	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        $r2 = newarray (java.lang.String)[1]	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        $r2[0] = ""	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        virtualinvoke $r1.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r2)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+        return	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void start(android.os.AsyncTask)>  
+    virtualinvoke $r2.<com.example.combination.Test: void start(android.os.AsyncTask)>($r3)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r2 = $r0.<com.example.combination.MainActivity: com.example.combination.Test mTest>	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    $r3 = $r0.<com.example.combination.MainActivity: com.example.combination.Tasker mTasker3>	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+    virtualinvoke $r2.<com.example.combination.Test: void cancel(android.os.AsyncTask)>($r3)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  
+        $r0 := @this: com.example.combination.Test	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void cancel(android.os.AsyncTask)>  
+        $r1 := @parameter0: android.os.AsyncTask	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void cancel(android.os.AsyncTask)>  
+        virtualinvoke $r1.<android.os.AsyncTask: boolean cancel(boolean)>(1)	 dummyMain  <com.example.combination.MainActivity: void onCreate(android.os.Bundle)>  <com.example.combination.Test: void cancel(android.os.AsyncTask)>  
+

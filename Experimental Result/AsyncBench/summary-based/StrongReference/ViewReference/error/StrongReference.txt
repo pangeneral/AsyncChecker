@@ -1,0 +1,2 @@
+StrongReference com.example.memoryleaktest.ViewReferenceAsyncTask
+

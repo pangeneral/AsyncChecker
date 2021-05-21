@@ -1,0 +1,10 @@
+NotTerminate com.example.combination.Tasker
+1 A <com.example.combination.MainActivity: void onCreate(android.os.Bundle)> $r2 = new com.example.combination.Tasker
+2 A <com.example.combination.MainActivity: void onCreate(android.os.Bundle)> $r2 = new com.example.combination.Tasker
+3 S <com.example.combination.MainActivity: void onCreate(android.os.Bundle)> virtualinvoke $r2.<com.example.combination.Tasker: android.os.AsyncTask execute(java.lang.Object[])>($r5)
+4 S <com.example.combination.MainActivity: void onResume()> virtualinvoke $r1.<com.example.combination.Tasker: android.os.AsyncTask execute(java.lang.Object[])>($r2)
+5 C <com.example.combination.MainActivity$1: void onClick(android.view.View)> virtualinvoke $r2.<com.example.combination.Tasker: boolean cancel(boolean)>(1)
+6 A <com.example.combination.MainActivity$2: void onClick(android.view.View)> $r3 = new com.example.combination.Tasker
+7 C <com.example.combination.MainActivity$1: void onClick(android.view.View)> virtualinvoke $r2.<com.example.combination.Tasker: boolean cancel(boolean)>(1)
+8 A <com.example.combination.MainActivity$2: void onClick(android.view.View)> $r3 = new com.example.combination.Tasker
+

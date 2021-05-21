@@ -1,0 +1,5 @@
+com.example.earlycancel.lifecycle.MainActivity 127
+sootTime: 1048
+androlic time: 347
+sootTime: 1048
+androlic time: 2255

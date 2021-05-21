@@ -1,0 +1,6 @@
+EarlyCancel com.example.earlycancel.lifecycle.Tasker
+1 A <com.example.earlycancel.lifecycle.MainActivity: void onCreate(android.os.Bundle)> $r5 = new com.example.earlycancel.lifecycle.Tasker
+2 C <com.example.earlycancel.lifecycle.MainActivity: void onStart()> virtualinvoke $r1.<android.os.AsyncTask: boolean cancel(boolean)>(1)
+3 S <com.example.earlycancel.lifecycle.MainActivity$1: void onClick(android.view.View)> virtualinvoke $r2.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+4 S <com.example.earlycancel.lifecycle.MainActivity$1: void onClick(android.view.View)> virtualinvoke $r2.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r4)
+

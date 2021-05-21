@@ -1,0 +1,14 @@
+Tue May 18 15:04:54 CST 2021
+E:\restgroup\AsyncCheckerBench\Apks\combination\CombinationParams.apk com.example.combination.MainActivity
+androlic.exception.analysis.AndrolicNullPointerException: $r1 can not be null
+	androlic.execution.processor.InvokeStmtProcessor.process(InvokeStmtProcessor.java:45)
+	androlic.execution.SymbolicEngine.traverse(SymbolicEngine.java:230)
+	androlic.execution.SymbolicEngine.iterativeTraverse(SymbolicEngine.java:169)
+	androlic.execution.SymbolicEngine.iterativeTraverse(SymbolicEngine.java:167)
+	androlic.execution.SymbolicEngine.solve(SymbolicEngine.java:122)
+	ac.AsyncMain$2.run(AsyncMain.java:202)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+------------------------------
+

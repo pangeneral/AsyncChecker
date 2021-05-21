@@ -1,0 +1,5 @@
+com.example.noloopright.MainActivity 85
+sootTime: 872
+androlic time: 412
+sootTime: 872
+androlic time: 2389

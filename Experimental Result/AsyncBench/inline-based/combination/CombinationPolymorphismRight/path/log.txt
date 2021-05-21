@@ -1,0 +1,5 @@
+com.example.combination.MainActivity 89
+sootTime: 885
+androlic time: 416
+sootTime: 885
+androlic time: 2380

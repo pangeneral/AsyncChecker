@@ -1,0 +1,5 @@
+com.example.forloop.MainActivity 88
+sootTime: 999
+androlic time: 436
+sootTime: 999
+androlic time: 2374

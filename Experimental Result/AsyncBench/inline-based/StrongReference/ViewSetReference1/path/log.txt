@@ -1,0 +1,5 @@
+com.example.memoryleaktest.MainActivity 100
+sootTime: 987
+androlic time: 357
+sootTime: 987
+androlic time: 2320

@@ -1,0 +1,10 @@
+EarlyCancel com.example.combination.Tasker
+1 A <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()> $r1 = new com.example.combination.Tasker
+2 S <com.example.combination.Test: void start(android.os.AsyncTask)> virtualinvoke $r1.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r2)
+3 A <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()> $r1 = new com.example.combination.Tasker
+4 S <com.example.combination.Test: void start(android.os.AsyncTask)> virtualinvoke $r1.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r2)
+5 A <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()> $r1 = new com.example.combination.Tasker
+6 C <com.example.combination.Test: void cancel(android.os.AsyncTask)> virtualinvoke $r1.<android.os.AsyncTask: boolean cancel(boolean)>(1)
+7 S <com.example.combination.Test: void start(android.os.AsyncTask)> virtualinvoke $r1.<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>($r2)
+8 A <com.example.combination.Test: com.example.combination.Tasker newAsyncTask()> $r1 = new com.example.combination.Tasker
+

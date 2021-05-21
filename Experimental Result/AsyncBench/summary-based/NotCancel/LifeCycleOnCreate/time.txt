@@ -1,0 +1,1 @@
+LifeCycleOnCreate.apk, 10000, 306

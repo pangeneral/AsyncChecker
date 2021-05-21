@@ -1,0 +1,5 @@
+com.example.loopinmethodright.MainActivity 85
+sootTime: 888
+androlic time: 418
+sootTime: 888
+androlic time: 2379

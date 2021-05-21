@@ -1,0 +1,5 @@
+com.example.repeatstart.MainActivity 113
+sootTime: 995
+androlic time: 305
+sootTime: 995
+androlic time: 2254

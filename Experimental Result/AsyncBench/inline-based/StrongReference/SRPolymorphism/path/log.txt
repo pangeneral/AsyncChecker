@@ -1,0 +1,5 @@
+com.example.strongReference.MainActivity 111
+sootTime: 941
+androlic time: 373
+sootTime: 941
+androlic time: 2319
